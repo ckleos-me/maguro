@@ -1,0 +1,13 @@
+body {
+    background-color: $color-white;
+    font-size: 16px;
+    line-height: 1em;
+    color: $color-black;
+    letter-spacing: $letter-spacing-no;
+    margin-top: 40px;
+    scroll-behavior: smooth;
+
+    @include mq(w-768) {
+        margin: 0;
+    }
+}

@@ -1,0 +1,271 @@
+header {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    background: #000000;
+    background: linear-gradient(to bottom, #000000 80%, #00000000 100%);
+    padding: 15px 0 15px 2.7%;
+    z-index: 90;
+    width: 100%;
+
+    .header__inner {
+        max-width: 1920px;
+        margin: 0 auto;
+        @include display-flex(row, space-between, center);
+
+        &__logo {
+            width: 254px;
+        }
+
+        &__nav {
+            @include display-flex(row, flex-start, center);
+
+            &__list {
+                @include display-flex(row, flex-start, center);
+
+                &--item {
+                    position: relative;
+                    padding: 0 20px;
+
+                    a {
+                        @include text($font-size-16, $line-height-no, $letter-spacing-no, 600, $font-poppins, $color-white);
+                        text-decoration: none;
+                        transition: opacity .3s;
+
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+
+                    &.has-child {
+                        position: relative;
+                        margin-right: 8px;
+
+                        ul {
+                            opacity: 0;
+                            position: absolute;
+                            top: 30px;
+                            right: -85px;
+                            width: 250px;
+                            padding: 20px;
+                            background-color: #333333;
+
+                            li {
+                                display: block;
+
+                                &:not(:last-child) {
+                                    margin-bottom: 20px;
+                                }
+
+                                a {
+                                    display: block;
+                                    text-align: center;
+                                }
+                            }
+
+                            &.active {
+                                animation: menutoactive .5s forwards;
+                            }
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            right: 2px;
+                            top: 3px;
+                            width: 8px;
+                            height: 8px;
+                            border-top: 2px solid $color-white;
+                            border-right: 2px solid $color-white;
+                            transform: rotate(135deg);
+                        }
+
+                        &.active::before {
+                            transform: rotate(315deg);
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes menutoactive {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes menutoactive-sp {
+    from {
+        opacity: 0;
+        height: 0px;
+    }
+
+    to {
+        opacity: 1;
+        height: 100%;
+        padding-top: 20px;
+
+    }
+
+}
+
+@include mq(w-1280) {
+    header {
+        padding: 20px 0 20px 2%;
+
+        .header__inner {
+            @include display-flex(row, space-between, center);
+
+
+            &__logo {
+                width: 200px;
+                max-width: 60vw;
+
+            }
+
+            &__nav {
+                display: none;
+
+                &.active {
+                    @include display-flex(column, flex-start, center);
+                }
+
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 80;
+                width: 80vw;
+                height: 100%;
+                background-color: $color-lightblack;
+                padding: 60px 2% 0;
+                box-shadow: 2px -4px 13px 3px #c4c4c494;
+
+                &__list {
+                    @include display-flex(column, flex-start, flex-start);
+
+                    &--item {
+                        padding: 0;
+                        margin: 20px 0;
+
+
+                        &.has-child {
+                            position: relative;
+                            margin-right: 0;
+
+                            ul {
+                                position: static;
+                                width: auto;
+                                height: 0;
+                                padding: 0;
+                                background-color: $color-lightblack;
+
+                                li {
+                                    display: block;
+
+                                    &:not(:last-child) {
+                                        margin-bottom: 20px;
+                                    }
+
+                                    a {
+                                        display: block;
+                                        text-align: left;
+                                    }
+                                }
+
+                                &.active {
+                                    animation: menutoactive-sp .5s forwards;
+                                }
+                            }
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                right: auto;
+                                left: -20px;
+                                top: 3px;
+                                width: 8px;
+                                height: 8px;
+                                border-top: 2px solid $color-white;
+                                border-right: 2px solid $color-white;
+                                transform: rotate(135deg);
+                            }
+
+                            &.active::before {
+                                transform: rotate(315deg);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .openbtn1 {
+        z-index: 99;
+        position: fixed;
+        top: 18px;
+        right: 0;
+        background: $color-black;
+        cursor: pointer;
+        width: 46px;
+        height: 46px;
+        border-radius: 5px;
+    }
+
+    /*ボタン内側*/
+    .openbtn1 span {
+        display: inline-block;
+        transition: all .4s;
+        /*アニメーションの設定*/
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        width: 45%;
+    }
+
+    .openbtn1 span:nth-of-type(1) {
+        top: 15px;
+    }
+
+    .openbtn1 span:nth-of-type(2) {
+        top: 23px;
+    }
+
+    .openbtn1 span:nth-of-type(3) {
+        top: 31px;
+    }
+
+    /*activeクラスが付与されると線が回転して×に*/
+
+    .openbtn1.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn1.active span:nth-of-type(2) {
+        opacity: 0;
+        /*真ん中の線は透過*/
+    }
+
+    .openbtn1.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+}

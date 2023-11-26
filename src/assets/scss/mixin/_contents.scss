@@ -1,0 +1,51 @@
+@for $i from 1 through 2 {
+    .spacing-img#{$i} {
+        margin: 60px auto;
+        width: 100%;
+        height: 345px;
+        background: url("../images/spacing-img#{$i}.jpg")50% 50% no-repeat;
+        background-size: cover;
+    }
+
+}
+
+.section--title {
+    display: inline-block;
+    @include text($font-size-55,
+        $line-height-no,
+        $letter-spacing-no,
+        700,
+        $font-roboto,
+        $color-black);
+    text-align: center
+}
+
+.alink {
+    @include text($font-size-14, $line-height-no, $letter-spacing-1, 500, inherit, $color-black);
+    padding: 12px 30px;
+    border: 1px solid $color-black;
+    border-radius: 50px;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 5px;
+        margin-left: 10px;
+        margin-bottom: 2px;
+    }
+
+}
+
+@include mq(w-768) {
+
+    @for $i from 1 through 2 {
+        .spacing-img#{$i} {
+            margin: 30px auto;
+            width: 100%;
+            height: 150px;
+            background-size: auto 100%;
+        }
+    }
+
+}
