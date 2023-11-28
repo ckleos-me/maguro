@@ -10,7 +10,7 @@
 }
 
 .section--title {
-    display: inline-block;
+    display: block;
     @include text($font-size-55,
         $line-height-no,
         $letter-spacing-no,

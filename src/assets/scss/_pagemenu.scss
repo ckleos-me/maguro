@@ -1,0 +1,52 @@
+.pagemenu {
+    padding: 0px 0 160px;
+
+    &__2menu {
+        @include display-100;
+
+        &__inner {
+            @include display-flex(row, space-between, stretch);
+
+            &__block {
+                width: 50%;
+                height: 500px;
+                display: grid;
+                place-content: center;
+
+                &.menu__restaurant {
+                    background: url(../images/menu-restaurants.png) 50% 50% no-repeat;
+                    background-size: cover;
+                }
+
+                &.menu__onlineShop {
+                    background: url(../images/menu-onlineshop.png) 50% 50% no-repeat;
+                    background-size: cover;
+                }
+
+                &__title {
+                    margin-top: 100px;
+                    @include text($font-size-46, $line-height-no, $letter-spacing-no, 700, $font-roboto, $color-white);
+                    text-align: center;
+                    text-shadow: 3px 3px 3px #000;
+                }
+
+                &__alink {
+                    display: inline-block;
+                    margin: 20px auto 0;
+                    width: 230px;
+                    padding: 14px 0 12px;
+                    @include text($font-size-18, $line-height-no, $letter-spacing-no, 600, $font-poppins, $color-white);
+                    text-align: center;
+                    text-decoration: none;
+                    background-color: #33333390;
+                    border: 3px solid $color-white;
+
+                    &__group {
+                        @include display-flex(row, justify-content, center);
+                        column-gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

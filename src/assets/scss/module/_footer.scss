@@ -1,0 +1,10 @@
+.footer__detail {
+    width: 100%;
+    background-color: $color-black;
+    padding: 43px 0;
+
+    &__copyright {
+        @include text($font-size-14, $line-height-no, $letter-spacing-no, 600, $font-poppins, $color-white);
+        text-align: center;
+    }
+}

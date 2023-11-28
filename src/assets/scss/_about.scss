@@ -1,0 +1,52 @@
+.about {
+    padding: 80px 0;
+
+    &__inner {
+        @include display-1440;
+        @include display-flex(row, space-between, center);
+        margin-top: 50px;
+
+        &__content {
+            width: 48.5%;
+            @include display-flex(column, center, flex-start);
+            row-gap: 30px;
+
+            &__title {
+                @include text($font-size-32, $line-height-sm, $letter-spacing-no, 700, $font-poppins, $color-black);
+            }
+
+            &__detail {
+                @include text($font-size-18, $line-height-md, $letter-spacing-no, 500, $font-poppins, $color-black);
+
+            }
+
+            &__alink {
+                padding: 16px 60px 14px;
+                border-radius: 50px;
+                background-color: $color-blue;
+                @include text($font-size-18, $line-height-no, $letter-spacing-no, 600, $font-poppins, $color-white);
+                text-decoration: none;
+                transition: opacity .3s;
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+
+        &__images {
+            width: 48.5%;
+            @include display-flex(row, space-between, center);
+            flex-wrap: wrap;
+            row-gap: 16px;
+
+            img {
+                width: 100%;
+
+                &:not(:first-child) {
+                    width: 48.5%;
+                }
+            }
+        }
+    }
+}

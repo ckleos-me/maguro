@@ -7,6 +7,12 @@ body {
     margin-top: 40px;
     scroll-behavior: smooth;
 
+    main {
+        background: url(../images/main-decoration.png) 100% 100% no-repeat,
+            url(../images/main-bg.png) 0 0 repeat-y;
+        background-size: 1000px auto, cover;
+    }
+
     @include mq(w-768) {
         margin: 0;
     }
