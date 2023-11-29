@@ -9,8 +9,34 @@ body {
 
     main {
         background: url(../images/main-decoration.png) 100% 100% no-repeat,
-            url(../images/main-bg.png) 0 0 repeat-y;
+            url(../images/main-bg.png) 0 0 no-repeat;
         background-size: 1000px auto, cover;
+    }
+
+    .breadcrumb {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        ul {
+            @include display-1440;
+            @include display-flex(row, flex-start, flex-start);
+
+            li {
+                @include text($font-size-16, $letter-spacing-no, $letter-spacing-no, 400, $font-poppins, #666666);
+
+                a {
+                    @include text($font-size-16, $letter-spacing-no, $letter-spacing-no, 400, $font-poppins, #666666);
+                    text-decoration: none;
+                }
+
+                &:not(:last-child) {
+                    &::after {
+                        content: ">";
+                        margin: 0 8px;
+                    }
+                }
+            }
+        }
     }
 
     @include mq(w-768) {

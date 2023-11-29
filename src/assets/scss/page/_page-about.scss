@@ -1,0 +1,401 @@
+.page__about__main {
+    background-image: none;
+
+    .page__type-of-maguro {
+        background-color: $color-white;
+
+        &__inner {
+            @include display-1440;
+            margin-top: 60px;
+            @include display-flex(row, space-between, stretch);
+            flex-wrap: wrap;
+            row-gap: 60px;
+
+            &__block {
+                width: 48.5%;
+
+                &:last-child {
+                    margin-bottom: 80px;
+                }
+
+                &__image {
+                    width: 100%;
+                    margin-bottom: 28px;
+                }
+
+                &__title {
+                    margin-bottom: 2px;
+                    @include text($font-size-32, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-blue);
+                }
+
+                &__subtitle {
+                    margin-bottom: 10px;
+                    @include text($font-size-24, $line-height-sm, $letter-spacing-no, 700, $font-poppins, $color-blue);
+
+                    &:nth-child(4) {
+                        margin-bottom: 4px;
+                        color: $color-black
+                    }
+                }
+
+                &__detail {
+                    @include text($font-size-18, $line-height-md, $letter-spacing-no, 500, $font-poppins, $color-black);
+                }
+            }
+        }
+    }
+
+    .page__to-singapore {
+        padding-bottom: 80px;
+
+        &__top-image {
+            @include display-100;
+            height: 280px;
+            background: url(../images/page/to-singapore-top-image.png)0 0 no-repeat;
+            background-size: cover;
+            display: grid;
+            place-content: center;
+
+            &__title {
+                @include text($font-size-55, $line-height-no, $letter-spacing-no, 700, $font-roboto, $color-white);
+                text-align: center;
+                text-shadow: 3px 3px 3px #000;
+            }
+        }
+
+        &__inner {
+            @include display-1440;
+            margin-top: 80px;
+
+            &__block {
+                @include display-flex(row, space-between, center);
+
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+
+                &__content {
+                    width: 48.5%;
+
+                    &__title {
+                        margin-bottom: 20px;
+                        @include text($font-size-32, $line-height-sm, $letter-spacing-no, 700, $font-poppins, $color-black);
+                    }
+
+                    &__detail {
+                        @include text($font-size-18, $line-height-md, $letter-spacing-no, 500, $font-poppins, $color-black);
+
+                    }
+                }
+
+                &__image {
+                    width: 48.5%;
+                }
+            }
+        }
+    }
+
+    .page__origin {
+        @include display-1440;
+        padding-top: 50px;
+        padding-bottom: 70px;
+        background: url(../images/main-bg.png) 0 0 repeat-y;
+        background-size: cover;
+
+        &__inner {
+            margin-top: 50px;
+            @include display-flex(row, space-between, flex-start);
+
+            &__image {
+                @include display-flex(row, space-between, flex-start);
+                flex-wrap: wrap;
+                row-gap: 30px;
+                width: 48.5%;
+
+                img {
+                    width: 100%;
+
+                    &:not(:first-child) {
+                        width: 48.5%;
+                    }
+                }
+            }
+
+            &__content {
+                width: 48.5%;
+
+                &__title {
+                    margin-bottom: 12px;
+                    @include text($font-size-22, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-blue);
+
+                    &.c-black {
+                        color: #000;
+                    }
+
+                }
+
+                &__detail {
+                    margin-bottom: 8px;
+                    @include text($font-size-18, $line-height-sm, $letter-spacing-no, 500, $font-poppins, $color-black);
+
+                }
+            }
+        }
+    }
+
+    .page__workflow {
+        padding: 100px 0;
+
+        &__subtitle {
+            @include text($font-size-38, $line-height-no, $letter-spacing-no, 700, $font-roboto, $color-black);
+            text-align: center;
+            margin-top: 6px;
+        }
+
+        &__inner {
+            @include display-1280;
+            margin-top: 50px;
+
+            &__image {
+                @include display-100;
+            }
+        }
+    }
+
+    .page__factory {
+        padding: 68px 0 0;
+        background: url(../images/main-bg.png) 0 0 no-repeat;
+        background-size: cover;
+
+        &__inner {
+            @include display-1440;
+            @include display-flex(row, space-between, stretch);
+            flex-wrap: wrap;
+            margin-top: 40px;
+
+            &__left,
+            &__right {
+                width: 48.5%;
+            }
+
+            &__left {
+                @include display-flex(column, space-between, flex-start);
+            }
+
+            &__block {
+                &.w-full {
+                    .page__factory__inner__block__image {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                &__title {
+                    @include text($font-size-22, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-black);
+                    margin-bottom: 16px;
+                }
+
+                &__image {
+                    @include display-flex(row, space-between, stretch);
+                    flex-wrap: wrap;
+                    row-gap: 10px;
+
+                    img {
+                        display: block;
+                        width: 32%;
+                    }
+                }
+            }
+        }
+
+        .page__export {
+            margin-top: 68px;
+            padding: 68px 0 80px;
+            background-image: none;
+            background-color: $color-white;
+
+            &__inner {
+                @include display-1440;
+                @include display-flex(row, space-between, center);
+
+                flex-wrap: wrap;
+                row-gap: 60px;
+
+                &__image {
+                    width: 48.5%;
+
+                    &.f-width {
+                        width: 100%;
+                    }
+                }
+
+                &__content {
+                    width: 48.5%;
+
+                    &__section--title {
+                        margin-bottom: 20px;
+                        text-align: left;
+                    }
+
+                    &__title {
+                        @include text($font-size-22, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-blue);
+                        margin-bottom: 6px;
+
+                        &.mt-40 {
+                            margin-top: 40px;
+                        }
+                    }
+
+                    &__detail {
+                        @include text($font-size-18, $line-height-md, $letter-spacing-no, 400, $font-poppins, $color-black);
+                    }
+
+                }
+            }
+        }
+    }
+
+    .page__savoring {
+        padding-bottom: 80px;
+        background: url(../images/main-bg.png)0 0 no-repeat;
+        background-size: cover;
+
+        &__top-image {
+            @include display-100;
+            height: 280px;
+            background: url(../images/page/page__savoring-top-image.png)0 0 no-repeat;
+            background-size: cover;
+            display: grid;
+            place-content: center;
+
+            &__title {
+                margin-bottom: 20px;
+                @include text($font-size-55, $line-height-no, $letter-spacing-no, 700, $font-roboto, $color-white);
+                text-align: center;
+                text-shadow: 3px 3px 3px #000;
+            }
+
+            &__subtitle {
+                @include text($font-size-38, $line-height-no, $letter-spacing-no, 700, $font-roboto, $color-white);
+                text-align: center;
+                text-shadow: 3px 3px 3px #000;
+            }
+        }
+
+        &__inner {
+            @include display-1440;
+            @include display-flex(row, space-between, center);
+            flex-wrap: wrap;
+            row-gap: 36px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+
+            &__content,
+            &__image,
+            &__board {
+                width: 48.5%;
+
+                &.w-100 {
+                    width: 100%;
+                }
+            }
+
+            &__content {
+                &__title {
+                    @include text($font-size-32, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-black);
+                    margin-bottom: 12px;
+                }
+
+                &__detail {
+                    @include text($font-size-18, $line-height-md, $letter-spacing-no, 500, $font-poppins, $color-black);
+                }
+            }
+
+            &__board {
+                border: 4px solid $color-blue;
+                @include display-flex(row, space-between, center);
+                flex-wrap: wrap;
+                background-color: $color-white;
+
+                &__title {
+                    width: 100%;
+                    background-color: $color-blue;
+                    @include text($font-size-32, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-white);
+                    text-align: center;
+                    padding: 10px 0;
+
+                }
+
+                &__detail {
+                    width: 58%;
+                    padding: 14px 0 14px 14px;
+                    @include text($font-size-18, $line-height-md, $letter-spacing-no, 500, $font-poppins, $color-black);
+                    align-self: flex-start;
+                }
+
+                &__image {
+                    width: 40%;
+                    padding: 14px 14px 14px 0;
+                    @include text($font-size-18, $line-height-md, $letter-spacing-no, 500, $font-poppins, $color-black);
+                }
+            }
+        }
+
+        &__bottominner {
+            margin-top: 50px;
+            @include display-1440;
+            @include display-flex(row, space-between, flex-start);
+
+            &__image {
+                @include display-flex(row, space-between, flex-start);
+                flex-wrap: wrap;
+                row-gap: 30px;
+                width: 48.5%;
+
+                img {
+                    width: 100%;
+
+                    &:not(:first-child) {
+                        width: 48.5%;
+                    }
+                }
+            }
+
+            &__content {
+                width: 48.5%;
+
+                &__title {
+                    margin-bottom: 12px;
+                    @include text($font-size-22, $line-height-sm, $letter-spacing-no, 700, $font-poppins, $color-blue);
+
+                }
+
+                &__detail {
+                    margin-bottom: 8px;
+                    @include text($font-size-18, $line-height-sm, $letter-spacing-no, 500, $font-poppins, $color-black);
+
+                }
+            }
+        }
+    }
+
+    .page__instructions {
+        margin-top: 70px;
+        position: relative;
+
+        &__inner {
+            margin: 60px auto;
+
+            #youtube {
+                display: block;
+                width: 100%;
+                max-width: 800px;
+                height: 31.2vw;
+                margin: 0 auto;
+                border-radius: 8px;
+            }
+
+        }
+    }
+}

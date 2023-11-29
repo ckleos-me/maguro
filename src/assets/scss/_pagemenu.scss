@@ -40,10 +40,64 @@
                     text-decoration: none;
                     background-color: #33333390;
                     border: 3px solid $color-white;
+                    transition: opacity .3s;
+
+                    &:hover {
+                        opacity: .7;
+                    }
 
                     &__group {
                         @include display-flex(row, justify-content, center);
                         column-gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__3menu {
+        @include display-1440;
+        margin-top: 80px;
+
+        &__inner {
+            @include display-flex(row, space-between, stretch);
+
+            &__block {
+                width: 31.6%;
+
+                &__image {
+                    vertical-align: bottom;
+                    aspect-ratio: 1/1;
+                }
+
+                &__content {
+                    background: url(../images/menu-bg.png) 0 0 no-repeat;
+                    background-size: cover;
+                    display: grid;
+                    place-content: center;
+                    padding: 60px 0 34px;
+
+                    &__title {
+                        @include text($font-size-46, $line-height-no, $letter-spacing-no, 700, $font-roboto, $color-white);
+                        text-align: center;
+                        text-shadow: 3px 3px 3px #000;
+                    }
+
+                    &__alink {
+                        margin: 28px auto 0;
+                        width: 80px;
+                        height: 80px;
+                        transition: opacity .3s;
+
+                        &:hover {
+                            opacity: .7;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            display: block;
+                        }
                     }
                 }
             }
