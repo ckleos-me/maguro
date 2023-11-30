@@ -1,0 +1,87 @@
+.page__restaurants__main {
+    background-image: none;
+    background-color: $color-white;
+    padding: 60px 0 120px;
+
+    .page__restaurants__list {
+        @include display-1280;
+
+        &__block {
+            @include display-flex(row, space-between, center);
+
+            &:not(:last-child) {
+                margin-bottom: 46px;
+            }
+
+            &__info {
+                width: 48.5%;
+
+                &__logo {
+                    width: 237px;
+                    height: auto;
+                    margin-bottom: 20px;
+                }
+
+                &__shopname {
+                    margin-bottom: 6px;
+                    @include text($font-size-24, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-black);
+
+                }
+
+                &__address,
+                &__tel {
+                    margin-bottom: 6px;
+                    @include text($font-size-18, $line-height-sm, $letter-spacing-no, 500, $font-poppins, $color-black);
+                }
+
+                &__title {
+                    margin-bottom: 6px;
+                    @include text($font-size-18, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-black);
+
+                }
+
+                &__lunch,
+                &__dinner {
+                    @include text($font-size-18, $line-height-no, $letter-spacing-no, 500, $font-poppins, $color-black);
+
+                    img {
+                        width: 90px;
+                        height: auto;
+                        vertical-align: middle;
+                        margin-right: 6px;
+                    }
+                }
+
+                &__lunch {
+                    margin-bottom: 3px;
+                }
+
+                &__dinner {
+                    margin-bottom: 12px;
+                }
+
+                &__menu {
+                    margin-bottom: 12px;
+
+                    a {
+                        display: inline-block;
+                        width: 190px;
+                        margin-bottom: 6px;
+                    }
+                }
+
+                &__sns {
+                    a {
+                        display: inline-block;
+                        width: 38px;
+                        margin-right: 6px;
+                    }
+                }
+            }
+
+            &__map {
+                width: 48.5%;
+            }
+        }
+    }
+}

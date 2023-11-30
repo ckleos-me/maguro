@@ -10,6 +10,26 @@
         background-size: cover;
     }
 
+    &.restaurants-firstview {
+        background: url('../images/page/page-restaurants-fv.png')50% 0 no-repeat;
+        background-size: cover;
+    }
+
+    &.company-firstview {
+        background: url('../images/page/page-company-fv.png')50% 0 no-repeat;
+        background-size: cover;
+    }
+
+    &.event-firstview {
+        background: url('../images/page/page-event-fv.png')50% 0 no-repeat;
+        background-size: cover;
+    }
+
+    &.promotion-firstview {
+        background: url('../images/page/page-promotion-fv.png')50% 0 no-repeat;
+        background-size: cover;
+    }
+
     &__content {
         @include text($font-size-65, $line-height-no, $letter-spacing-no, 700, $font-roboto, $color-white);
         text-align: center;

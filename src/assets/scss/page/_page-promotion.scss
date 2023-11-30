@@ -1,0 +1,49 @@
+.page__promotion__subtitle {
+    margin-top: 6px;
+    @include text($font-size-38, $line-height-no, $letter-spacing-no, 400, $font-roboto, $color-black);
+    text-align: center;
+}
+
+.page__promotion__main {
+    background-image: none;
+    background-color: $color-white;
+
+    &__inner {
+        @include display-1440;
+        @include display-flex(row, space-between, stretch);
+        flex-wrap: wrap;
+        row-gap: 60px;
+        margin-top: 60px;
+        margin-bottom: 80px;
+
+        &__block {
+            width: 48.5%;
+
+            &__image {
+                width: 100%;
+                display: block;
+                margin-bottom: 30px;
+            }
+
+            &__title {
+                @include text($font-size-32, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-black);
+                margin-bottom: 12px;
+            }
+
+            &__subtitle {
+                @include text($font-size-24, $line-height-sm, $letter-spacing-no, 700, $font-poppins, $color-black);
+                margin-bottom: 12px;
+            }
+
+            &__detail {
+                @include text($font-size-18, $line-height-sm, $letter-spacing-no, 500, $font-poppins, $color-black);
+                margin-bottom: 16px;
+            }
+
+            &__alink {
+                @include text($font-size-18, $line-height-no, $letter-spacing-no, 400, $font-poppins, #1a0dab);
+                border-bottom: 2px solid #1a0dab;
+            }
+        }
+    }
+}
