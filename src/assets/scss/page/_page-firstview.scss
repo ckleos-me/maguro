@@ -42,7 +42,8 @@
         height: 200px;
 
         &__content {
-            @include text($font-size-55, $line-height-no, $letter-spacing-no, 400, $font-poppins, $color-white);
+            font-size: $font-size-38;
+            line-height: $line-height-sm;
         }
     }
 

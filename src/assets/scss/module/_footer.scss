@@ -8,3 +8,12 @@
         text-align: center;
     }
 }
+
+@include mq(w-768) {
+    .footer__detail {
+
+        &__copyright {
+            line-height: $line-height-sm;
+        }
+    }
+}

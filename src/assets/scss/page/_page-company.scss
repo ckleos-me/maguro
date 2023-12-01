@@ -1,0 +1,266 @@
+.page__company__main {
+    .page__company__info {
+        background-image: none;
+        background-color: $color-white;
+        padding-bottom: 60px;
+
+        &__logo {
+            display: block;
+            width: 273px;
+            margin: 0 auto;
+        }
+
+        &__block {
+            width: 1000px;
+            margin: 0 auto;
+            @include display-flex(row, flex-start, center);
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+
+            &:not(:first-child) {
+                margin-top: 50px;
+            }
+
+            &__title {
+                width: 28%;
+                @include text($font-size-22, $line-height-no, $letter-spacing-no, 600, $font-poppins, $color-black);
+            }
+
+            &__detail {
+                width: 60%;
+                @include text($font-size-22, $line-height-md, $letter-spacing-no, 400, $font-poppins, $color-black);
+            }
+
+            &__alink {
+                width: 60%;
+
+                a {
+                    display: block;
+                    @include text($font-size-22, $line-height-md, $letter-spacing-no, 400, $font-poppins, #0071bb);
+                }
+            }
+        }
+    }
+
+    .page__chefs {
+        padding: 50px 0 80px;
+
+        &__inner {
+            width: 800px;
+            margin: 40px auto 0;
+            @include display-flex(row, space-between, flex-start);
+
+            &__block {
+                width: 42%;
+                @include display-flex(column, center, center);
+                row-gap: 10px;
+
+                &__image {
+                    display: block;
+                    width: 80%;
+                    margin-bottom: 10px;
+                }
+
+                &__title {
+                    @include text($font-size-32, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-black);
+                }
+
+                &__subtitle {
+                    @include text($font-size-18, $line-height-no, $letter-spacing-no, 500, $font-poppins, $color-black);
+                }
+            }
+        }
+    }
+
+    .page__accomplishment {
+        background-image: none;
+        background-color: $color-white;
+        padding: 80px 0 150px;
+
+        &__inner {
+            @include display-1440;
+            @include display-flex(column, center, center);
+            row-gap: 60px;
+            margin-top: 60px;
+
+            &__block {
+                @include display-flex(row, space-between, flex-start);
+
+                &__content {
+                    margin-top: 6px;
+                    width: 48.5%;
+
+                    &__tag {
+                        display: inline-block;
+                        padding: 10px 26px;
+                        border-radius: 24px;
+                        background-color: $color-black;
+                        @include text($font-size-22, $line-height-no, $letter-spacing-no, 700, $font-poppins, $color-white);
+                        margin-bottom: 14px;
+                    }
+
+                    &__title {
+                        @include text($font-size-32, $line-height-sm, $letter-spacing-no, 700, $font-poppins, $color-black);
+                        margin-bottom: 14px;
+                    }
+
+                    &__detail {
+                        @include text($font-size-18, $line-height-md, $letter-spacing-no, 500, $font-poppins, $color-black);
+
+                        &:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                }
+
+                &__image {
+                    width: 48.5%;
+
+                    &.multi-img {
+                        width: 48.5%;
+                        @include display-flex(row, space-between, center);
+                        flex-wrap: wrap;
+                        row-gap: 16px;
+
+                        img {
+                            width: 100%;
+
+                            &:not(:first-child) {
+                                width: 48.5%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__offer {
+            margin-top: 80px;
+            @include text($font-size-32, $line-height-sm, $letter-spacing-no, 700, $font-poppins, $color-black);
+            text-align: center;
+        }
+    }
+}
+
+@include mq(w-768) {
+    .page__company__main {
+        .page__company__info {
+
+            &__logo {
+                width: 200px;
+                margin: 20px auto 0;
+            }
+
+            &__block {
+                width: 86%;
+                margin: 0 auto;
+                @include display-flex(column, center, center);
+                border-bottom: 1px solid #333;
+                padding-bottom: 20px;
+
+                &:not(:first-child) {
+                    margin-top: 50px;
+                }
+
+                &__title {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 12px;
+                }
+
+                &__detail {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                &__alink {
+                    width: 100%;
+
+                    a {
+                        font-size: $font-size-18;
+                    }
+                }
+            }
+        }
+
+        .page__chefs {
+
+            &__inner {
+                @include display-100sp;
+                margin: 40px auto 0;
+                @include display-flex(column, center, center);
+                row-gap: 40px;
+
+                &__block {
+                    width: 100%;
+
+                    &__image {
+                        width: 60%;
+                    }
+
+                    &__title {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+
+        .page__accomplishment {
+            &__inner {
+                @include display-100sp;
+                @include display-flex(column, center, center);
+                row-gap: 60px;
+                margin-top: 60px;
+
+                &__block {
+                    @include display-flex(column, center, center);
+
+                    &__content {
+                        margin-top: 6px;
+                        width: 100%;
+                        order: 1;
+
+                        &__tag {
+                            display: block;
+                            max-width: 300px;
+                            font-size: 20px;
+                            margin: 0 auto 14px;
+                            text-align: center
+                        }
+
+                        &__title {
+                            font-size: 28px;
+                            margin-bottom: 14px;
+                        }
+
+                    }
+
+                    &__image {
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        &.multi-img {
+                            width: 100%;
+
+                            img {
+                                width: 100%;
+
+                                &:not(:first-child) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__offer {
+                margin-top: 80px;
+                padding: 0 20px;
+                font-size: 24px;
+            }
+        }
+    }
+
+}

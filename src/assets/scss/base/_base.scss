@@ -41,5 +41,12 @@ body {
 
     @include mq(w-768) {
         margin: 0;
+
+        .breadcrumb {
+
+            ul {
+                @include display-100sp;
+            }
+        }
     }
 }

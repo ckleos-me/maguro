@@ -22,3 +22,27 @@
         }
     }
 }
+
+@include mq(w-768) {
+    .firstview {
+        &__inner {
+            background:
+                url(../images/firstview-image.png) 100% 100% no-repeat;
+            background-size: 100% auto;
+            @include display-100sp;
+            @include display-flex(column, flex-start, flex-start);
+
+            &__title {
+                transform: translateY(120px);
+                font-size: $font-size-46;
+                text-align: center;
+            }
+
+            &__subtitle {
+                transform: translateY(140px);
+                font-size: $font-size-24;
+                text-align: center;
+            }
+        }
+    }
+}

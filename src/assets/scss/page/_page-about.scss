@@ -112,6 +112,10 @@
                 row-gap: 30px;
                 width: 48.5%;
 
+                &.d-sp {
+                    display: none;
+                }
+
                 img {
                     width: 100%;
 
@@ -200,6 +204,7 @@
                     @include display-flex(row, space-between, stretch);
                     flex-wrap: wrap;
                     row-gap: 10px;
+
 
                     img {
                         display: block;
@@ -353,6 +358,10 @@
                 row-gap: 30px;
                 width: 48.5%;
 
+                &.d-sp {
+                    display: none;
+                }
+
                 img {
                     width: 100%;
 
@@ -364,6 +373,11 @@
 
             &__content {
                 width: 48.5%;
+
+                &__main-title {
+                    margin-bottom: 12px;
+                    @include text($font-size-32, $line-height-sm, $letter-spacing-no, 700, $font-poppins, $color-black);
+                }
 
                 &__title {
                     margin-bottom: 12px;
@@ -398,4 +412,270 @@
 
         }
     }
+}
+
+
+@include mq(w-768) {
+    .page__about__main {
+
+        .page__type-of-maguro {
+
+            &__inner {
+                @include display-100sp;
+                margin-top: 50px;
+                @include display-flex(row, space-between, stretch);
+                flex-wrap: wrap;
+                row-gap: 40px;
+
+                &__block {
+                    width: 100%;
+
+                    &__subtitle {
+                        font-size: $font-size-22;
+                    }
+                }
+            }
+        }
+
+        .page__to-singapore {
+
+            &__top-image {
+
+                &__title {
+                    font-size: $font-size-38;
+                    line-height: $line-height-sm;
+                }
+            }
+
+            &__inner {
+                @include display-100sp;
+                margin-top: 40px;
+
+                &__block {
+                    @include display-flex(row, space-between, center);
+                    flex-wrap: wrap;
+
+                    &__content {
+                        width: 100%;
+                        order: 1;
+
+                        &__title {
+                            font-size: $font-size-28;
+                        }
+                    }
+
+                    &__image {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        .page__origin {
+            @include display-100sp;
+            padding-top: 60px;
+
+            &__inner {
+                margin-top: 50px;
+                @include display-flex(column, center, center);
+                row-gap: 30px;
+
+                &__image {
+                    width: 100%;
+
+                    &.d-sp {
+                        display: flex;
+                    }
+                }
+
+                &__content {
+                    width: 100%;
+                }
+            }
+        }
+
+        .page__workflow {
+            padding: 60px 0;
+
+            &__subtitle {
+                font-size: 24px;
+                padding: 0 12px;
+            }
+
+            &__inner {
+                @include display-100sp;
+
+            }
+        }
+
+        .page__factory {
+
+            &__inner {
+                @include display-100sp;
+                @include display-flex(column, center, center);
+                margin-top: 60px;
+
+                &>img {
+                    aspect-ratio: 3/2;
+                    object-fit: cover;
+                    margin-bottom: 30px;
+                }
+
+                &__left,
+                &__right {
+                    width: 100%;
+                }
+
+                &__right {
+                    display: none;
+                }
+
+                &__left {
+                    @include display-flex(column, center, center);
+                    row-gap: 30px;
+                }
+
+                &__block {
+
+
+                    &__image {
+                        &:first-child {
+                            margin-bottom: 100px;
+                        }
+
+                        img {
+                            display: block;
+                            width: 48.5%;
+                        }
+                    }
+                }
+            }
+
+            .page__export {
+                &__inner {
+                    @include display-100sp;
+                    @include display-flex(row, space-between, center);
+                    flex-wrap: wrap;
+                    row-gap: 30px;
+
+                    &__image {
+                        width: 100%;
+                    }
+
+                    &__content {
+                        width: 100%;
+
+
+
+                    }
+                }
+            }
+        }
+
+        .page__savoring {
+
+            &__top-image {
+
+                &__title {
+                    font-size: $font-size-38;
+                }
+
+                &__subtitle {
+                    font-size: $font-size-28;
+                    line-height: $line-height-sm;
+                }
+            }
+
+            &__inner {
+                @include display-100sp;
+                @include display-flex(column, center, center);
+                row-gap: 30px;
+                margin-top: 40px;
+
+                &__content,
+                &__image,
+                &__board {
+                    width: 100%;
+
+                    &.w-100 {
+                        width: 100%;
+                    }
+                }
+
+
+                &__board {
+                    @include display-flex(column, center, center);
+
+                    &__title {
+                        font-size: 28px;
+                    }
+
+                    &__detail {
+                        order: 1;
+                        width: 100%;
+                    }
+
+                    &__image {
+                        width: 100%;
+                        padding: 0;
+                        aspect-ratio: 3/2;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            &__bottominner {
+                @include display-100sp;
+                padding: 0 12px;
+                margin-top: 20px;
+                @include display-flex(column, center, center);
+
+                &__image {
+                    @include display-flex(row, space-between, flex-start);
+                    width: 100%;
+
+                    &.d-sp {
+                        display: flex;
+
+                        img {
+                            width: 48.5%;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                &__content {
+                    width: 100%;
+
+                    &__main-title {
+                        font-size: $font-size-26;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        .page__instructions {
+            margin-top: 50px;
+            padding-bottom: 50px;
+            position: relative;
+
+            &__inner {
+                margin: 20px auto;
+
+                #youtube {
+                    width: 100%;
+                    max-width: 90vw;
+                    height: 49vw;
+                }
+
+            }
+        }
+    }
+
 }

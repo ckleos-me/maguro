@@ -50,3 +50,30 @@
         }
     }
 }
+
+@include mq(w-768) {
+    .about {
+        padding: 80px 0;
+
+        &__inner {
+            @include display-100sp;
+            @include display-flex(column, center, center);
+            margin-top: 40px;
+            row-gap: 30px;
+
+            &__content {
+                width: 100%;
+
+
+                &__alink {
+                    margin: 0 auto;
+                }
+            }
+
+            &__images {
+                width: 100%;
+            }
+        }
+    }
+
+}

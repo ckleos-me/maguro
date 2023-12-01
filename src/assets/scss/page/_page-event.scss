@@ -1,0 +1,58 @@
+.page__event__main {
+    padding-bottom: 150px;
+    background-image: none;
+    background-color: $color-white;
+
+    .page__event__inner {
+        margin-top: 60px;
+        margin: 60px auto;
+
+        #youtube {
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            height: 31.2vw;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+    }
+
+    .page__event__gallery {
+        @include display-1440;
+        @include display-flex(row, center, stretch);
+        flex-wrap: wrap;
+        gap: 17px;
+
+        img {
+            width: 24%;
+        }
+    }
+}
+
+@include mq(w-768) {
+    .page__event__main {
+        .page__event__inner {
+            #youtube {
+                width: 100%;
+                max-width: 90vw;
+                height: 49vw;
+            }
+        }
+
+        .page__event__gallery {
+            @include display-100sp;
+            @include display-flex(row, center, stretch);
+            flex-wrap: wrap;
+            gap: 6px;
+
+            img {
+                width: calc(33% - 6px);
+
+                &:last-child {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+}
