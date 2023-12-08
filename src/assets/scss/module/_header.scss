@@ -1,9 +1,10 @@
 header {
     position: fixed;
     top: 0;
-    height: 100px;
+    height: 80px;
     background: #000000;
-    background: linear-gradient(to bottom, #000000 80%, #00000000 100%);
+    background: linear-gradient(to bottom, #000000 70%, #00000000 100%);
+    background: #111;
     padding: 15px 0 15px 2.7%;
     z-index: 90;
     width: 100%;
