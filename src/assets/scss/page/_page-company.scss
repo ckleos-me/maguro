@@ -48,7 +48,7 @@
         &__inner {
             width: 800px;
             margin: 40px auto 0;
-            @include display-flex(row, space-between, flex-start);
+            @include display-flex(row, center, flex-start);
 
             &__block {
                 width: 42%;
@@ -111,7 +111,6 @@
                             margin-bottom: 20px;
                         }
                     }
-
                 }
 
                 &__image {
@@ -146,7 +145,6 @@
 @include mq(w-768) {
     .page__company__main {
         .page__company__info {
-
             &__logo {
                 width: 200px;
                 margin: 20px auto 0;
@@ -185,7 +183,6 @@
         }
 
         .page__chefs {
-
             &__inner {
                 @include display-100sp;
                 margin: 40px auto 0;
@@ -226,14 +223,13 @@
                             max-width: 300px;
                             font-size: 20px;
                             margin: 0 auto 14px;
-                            text-align: center
+                            text-align: center;
                         }
 
                         &__title {
                             font-size: 28px;
                             margin-bottom: 14px;
                         }
-
                     }
 
                     &__image {
@@ -262,5 +258,4 @@
             }
         }
     }
-
 }
